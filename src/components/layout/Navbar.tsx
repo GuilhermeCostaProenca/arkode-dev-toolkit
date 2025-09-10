@@ -34,18 +34,39 @@ export function Navbar() {
               <Link to="/">Home</Link>
             </Button>
             <Button 
-              variant={isActive('/workspaces') ? 'secondary' : 'ghost'} 
+              variant={isActive('/studio') || isActive('/workspaces') || isActive('/projects') ? 'secondary' : 'ghost'} 
               size="sm" 
               asChild
             >
-              <Link to="/workspaces">Workspaces</Link>
+              <Link to="/workspaces">Studio</Link>
             </Button>
             <Button 
-              variant={isActive('/projects') ? 'secondary' : 'ghost'} 
+              variant={isActive('/agency') ? 'secondary' : 'ghost'} 
               size="sm" 
               asChild
             >
-              <Link to="/projects">Projects</Link>
+              <Link to="/agency">Agency</Link>
+            </Button>
+            <Button 
+              variant={isActive('/orion') ? 'secondary' : 'ghost'} 
+              size="sm" 
+              asChild
+            >
+              <Link to="/orion">ORION</Link>
+            </Button>
+            <Button 
+              variant={isActive('/knowledge') ? 'secondary' : 'ghost'} 
+              size="sm" 
+              asChild
+            >
+              <Link to="/knowledge">Knowledge</Link>
+            </Button>
+            <Button 
+              variant={isActive('/integrations') ? 'secondary' : 'ghost'} 
+              size="sm" 
+              asChild
+            >
+              <Link to="/integrations">Integrations</Link>
             </Button>
           </div>
         )}

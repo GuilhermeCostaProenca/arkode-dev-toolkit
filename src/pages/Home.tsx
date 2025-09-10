@@ -32,11 +32,11 @@ export default function Home() {
     return (
       <div className="arkode-container py-16">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold mb-6">
+            <h1 className="text-4xl font-bold mb-6">
             Welcome to {config.APP_NAME}
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
-            Professional development tools for modern teams
+            Complete development and business management platform
           </p>
           <Button size="lg" asChild>
             <Link to="/login">Get Started</Link>
@@ -97,12 +97,17 @@ export default function Home() {
             <div className="space-y-3">
               <Button variant="outline" size="sm" asChild className="w-full justify-start">
                 <Link to="/workspaces">
-                  Go to Workspaces
+                  Studio
                 </Link>
               </Button>
               <Button variant="outline" size="sm" asChild className="w-full justify-start">
-                <Link to="/projects">
-                  Go to Projects
+                <Link to="/agency">
+                  Agency
+                </Link>
+              </Button>
+              <Button variant="outline" size="sm" asChild className="w-full justify-start">
+                <Link to="/orion">
+                  ORION AI
                 </Link>
               </Button>
             </div>

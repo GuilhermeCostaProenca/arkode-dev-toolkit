@@ -1,3 +1,22 @@
+# Editor/OS
+.vscode/
+.DS_Store
+
+# Node
+web/node_modules/
+web/dist/
+web/.env.local
+
+# Python
+arkode-backend/.env
+arkode-backend/.venv/
+arkode-backend/__pycache__/
+arkode-backend/.alembic/
+arkode-backend/*.sqlite
+
+# Docker
+infra/dbdata/
+
 # Logs
 logs
 *.log
@@ -7,16 +26,8 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
 # Editor directories and files
-.vscode/*
-!.vscode/extensions.json
 .idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj

@@ -1,0 +1,41 @@
+openapi: 3.0.3
+info:
+  title: Arkode API
+  version: 0.1.0
+servers:
+  - url: http://localhost:3333
+paths:
+  /health:
+    get:
+      responses:
+        '200':
+          description: ok
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+  /auth/login:
+    post:
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, password]
+              properties:
+                email: { type: string, format: email }
+                password: { type: string, minLength: 1 }
+      responses:
+        '200':
+          description: token
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access_token: { type: string }
+                  token_type: { type: string, enum: [bearer] }

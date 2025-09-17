@@ -13,6 +13,8 @@ import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 import Agency from "./pages/Agency";
 import Orion from "./pages/Orion";
+import OrionStudy from "./pages/orion/Study";
+import OrionHealth from "./pages/orion/Health";
 import Knowledge from "./pages/Knowledge";
 import Integrations from "./pages/Integrations";
 import Leads from "./pages/agency/Leads";
@@ -43,6 +45,8 @@ const App = () => (
             <Route path="/agency/proposals/:id" element={<ProposalEdit />} />
             <Route path="/agency/calendar" element={<Calendar />} />
             <Route path="/orion" element={<Orion />} />
+            <Route path="/orion/study" element={<OrionStudy />} />
+            <Route path="/orion/health" element={<OrionHealth />} />
             <Route path="/knowledge" element={<Knowledge />} />
             <Route path="/integrations" element={<Integrations />} />
             <Route path="/settings" element={<Settings />} />

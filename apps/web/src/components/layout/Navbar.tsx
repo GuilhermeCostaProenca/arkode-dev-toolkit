@@ -80,7 +80,6 @@ export function Navbar() {
                 {activeWorkspace.name}
                 <ChevronDown className="ml-2 h-3 w-3" />
               </Button>
-              {/* TODO: Add dropdown for workspace switching */}
             </div>
           )}
 

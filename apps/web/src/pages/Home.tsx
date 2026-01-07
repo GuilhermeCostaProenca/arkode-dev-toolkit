@@ -29,17 +29,18 @@ export default function Home() {
   }, []);
 
   if (!user) {
-    return (
+        return (
       <div className="arkode-container py-16">
         <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl font-bold mb-6">
-            Welcome to {config.APP_NAME}
+          <h1 className="text-4xl font-bold mb-6">
+            {config.APP_NAME} Portfolio Demo
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
-            Complete development and business management platform
+            A finished concept showcasing integrated workflows for studio operations, built with
+            curated demo data and a production-ready UI.
           </p>
           <Button size="lg" asChild>
-            <Link to="/login">Get Started</Link>
+            <Link to="/login">Explore the Demo</Link>
           </Button>
         </div>
       </div>
@@ -55,7 +56,7 @@ export default function Home() {
             Welcome back, {user.name.split(' ')[0]}
           </h1>
           <p className="text-muted-foreground">
-            {activeWorkspace ? `Working in ${activeWorkspace.name}` : 'Select a workspace to get started'}
+            {activeWorkspace ? `Demo workspace: ${activeWorkspace.name}` : 'Select a demo workspace to explore'}
           </p>
         </div>
 
@@ -71,18 +72,18 @@ export default function Home() {
               {healthStatus === 'loading' ? (
                 <LoadingSpinner size="sm" />
               ) : (
-                <StatusBadge status={healthStatus} />
-              )}
-            </div>
+              <StatusBadge status={healthStatus} />
+            )}
+          </div>
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span className="text-muted-foreground">API URL:</span>
                 <span className="font-mono text-xs">{config.API_URL}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-muted-foreground">Mode:</span>
+                <span className="text-muted-foreground">Data Mode:</span>
                 <span className={config.MOCK_API ? 'text-warning' : 'text-success'}>
-                  {config.MOCK_API ? 'Mock' : 'Live'}
+                  {config.MOCK_API ? 'Portfolio Demo' : 'Live'}
                 </span>
               </div>
             </div>
@@ -133,15 +134,15 @@ export default function Home() {
         </div>
 
         {/* Recent Activity */}
-        <Card className="p-6">
-          <h3 className="font-semibold mb-4">Recent Activity</h3>
-          <div className="text-center py-8 text-muted-foreground">
-            <Activity className="h-12 w-12 mx-auto mb-4 opacity-50" />
-            <p>No recent activity</p>
-            <p className="text-sm">Start working on projects to see your activity here</p>
-          </div>
-        </Card>
+          <Card className="p-6">
+            <h3 className="font-semibold mb-4">Recent Activity</h3>
+            <div className="text-center py-8 text-muted-foreground">
+              <Activity className="h-12 w-12 mx-auto mb-4 opacity-50" />
+              <p>No recent activity yet</p>
+              <p className="text-sm">Use demo projects to visualize your activity timeline</p>
+            </div>
+          </Card>
+        </div>
       </div>
-    </div>
   );
 }

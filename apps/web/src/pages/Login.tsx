@@ -62,7 +62,7 @@ export default function Login() {
             <span className="text-primary-foreground font-bold text-xl">A</span>
           </div>
           <h1 className="text-2xl font-bold">{config.APP_NAME}</h1>
-          <p className="text-muted-foreground mt-2">Sign in to your account</p>
+          <p className="text-muted-foreground mt-2">Sign in to access the portfolio demo</p>
         </div>
 
         {/* Login Form */}
@@ -113,7 +113,7 @@ export default function Login() {
           {/* Demo Credentials */}
           {config.MOCK_API && (
             <div className="mt-6 p-4 bg-muted rounded-lg">
-              <p className="text-sm font-medium mb-2">Demo Credentials:</p>
+              <p className="text-sm font-medium mb-2">Demo Access:</p>
               <p className="text-xs text-muted-foreground font-mono">
                 Email: john@arkode.dev<br />
                 Password: password

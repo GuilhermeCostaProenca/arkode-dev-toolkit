@@ -24,8 +24,8 @@ export default function Settings() {
     setMockMode(enabled);
     
     toast({
-      title: "API Mode changed",
-      description: `Switched to ${enabled ? 'Mock' : 'Live'} API mode. Page will reload.`,
+      title: "Data mode updated",
+      description: `Switched to ${enabled ? 'Portfolio Demo' : 'Live'} data. Page will reload.`,
     });
   };
 
@@ -61,7 +61,7 @@ export default function Settings() {
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-2">Settings</h1>
           <p className="text-muted-foreground">
-            Manage your {config.APP_NAME} preferences and configuration
+            Manage your {config.APP_NAME} preferences and demo configuration
           </p>
         </div>
 
@@ -96,17 +96,17 @@ export default function Settings() {
           <Card className="p-6">
             <div className="flex items-center space-x-2 mb-4">
               <Database className="h-5 w-5 text-muted-foreground" />
-              <h3 className="font-semibold">API Configuration</h3>
+              <h3 className="font-semibold">Data Configuration</h3>
             </div>
             
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <div>
                   <Label htmlFor="mock-mode" className="text-base font-medium">
-                    Use Mock API
+                    Use Demo Data
                   </Label>
                   <p className="text-sm text-muted-foreground">
-                    Enable mock mode for development and testing
+                    Load curated data used for portfolio previews and walkthroughs
                   </p>
                 </div>
                 <Switch

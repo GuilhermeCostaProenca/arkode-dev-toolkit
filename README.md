@@ -1,11 +1,18 @@
 # Arkode Dev Toolkit
 
-Monorepo para o Arkode Dev Toolkit com frontend e backend separados.
+Monorepo do Arkode Dev Toolkit, construído como um projeto de portfólio para demonstrar a visão de uma plataforma integrada de operações digitais. O foco é apresentar fluxos completos, UI refinada e dados simulados para testes e demonstrações.
+
+## O que está pronto
+
+- **Front-end completo** com jornadas de autenticação, workspace, projetos e módulos temáticos.
+- **Dados simulados** para permitir navegação sem depender de back-end ativo.
+- **Estrutura modular** pronta para evoluir integrações e serviços reais.
 
 ## Estrutura
 
-- **Frontend** em `web/` (Lovable)
-- **Backend** em `arkode-backend/` (FastAPI)
+- **Frontend** em `apps/web/` (React + Vite)
+- **Backend** em `apps/api/` (FastAPI)
+- **Infra** em `infra/` (Docker)
 
 ## Como executar
 
@@ -20,14 +27,14 @@ docker compose up --build
 
 #### Frontend
 ```bash
-cd web
-npm install
-npm run dev
+cd apps/web
+pnpm install
+pnpm dev
 ```
 
 #### Backend
 ```bash
-cd arkode-backend
+cd apps/api
 poetry install
 uvicorn app.main:app --reload
 ```

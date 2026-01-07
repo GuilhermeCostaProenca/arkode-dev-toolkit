@@ -159,7 +159,7 @@ export default function ProjectView() {
               <h3 className="font-semibold mb-4">Project Timeline</h3>
               <div className="text-center py-8 text-muted-foreground">
                 <BarChart3 className="h-12 w-12 mx-auto mb-4 opacity-50" />
-                <p>Timeline visualization coming soon</p>
+                <p>Timeline visualization (concept preview)</p>
               </div>
             </Card>
           </TabsContent>
@@ -195,7 +195,7 @@ export default function ProjectView() {
               <div className="text-center py-12 text-muted-foreground">
                 <Sparkles className="h-12 w-12 mx-auto mb-4 opacity-50" />
                 <p>AI specification generation</p>
-                <p className="text-sm">Coming soon - automatic specs from user stories</p>
+                <p className="text-sm">Concept preview based on user stories</p>
               </div>
             </Card>
           </TabsContent>
